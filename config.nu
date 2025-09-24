@@ -1,0 +1,47 @@
+# config.nu
+#
+# Installed by:
+# version = "0.106.1"
+#
+# This file is used to override default Nushell settings, define
+# (or import) custom commands, or run any other startup tasks.
+# See https://www.nushell.sh/book/configuration.html
+#
+# Nushell sets "sensible defaults" for most configuration settings, 
+# so your `config.nu` only needs to override these defaults if desired.
+#
+# You can open this file in your default editor using:
+#     config nu
+#
+# You can also pretty-print and page through the documentation for configuration
+# options using:
+#     config nu --doc | nu-highlight | less -R
+$env.PROMPT_COMMAND = {
+  let path = (ansi "#1f6feb") + $env.PWD + (ansi reset)
+  $path
+}
+
+
+$env.config = {
+    show_banner: false
+    ls: {
+        use_ls_colors: false
+    }
+table: {
+    mode: rounded
+  }
+  color_config: {
+    separator: white
+    header: "#1f6feb"  # Headers (name, type, size, modified)
+    row_index: "#1f6feb"  # Row numbers
+  }
+    keybindings: [
+        {
+            name: clear_command
+            modifier: none
+            keycode: Esc
+            mode: [emacs, vi_normal, vi_insert]
+            event: { edit: Clear }
+        }
+    ]
+}
