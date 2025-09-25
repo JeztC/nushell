@@ -21,6 +21,8 @@ $env.PROMPT_COMMAND = {
   $path
 }
 
+$env.PROMPT_INDICATOR = { (ansi reset) + "> " + (ansi reset) }
+
 
 $env.config = {
     show_banner: false
@@ -34,6 +36,9 @@ table: {
     separator: white
     header: "#1f6feb"  # Headers (name, type, size, modified)
     row_index: "#1f6feb"  # Row numbers
+    shape_external: light_cyan
+    shape_externalarg: cyan
+    shape_closure: green_bold
   }
     keybindings: [
         {
