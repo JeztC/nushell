@@ -17,7 +17,7 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 $env.PROMPT_COMMAND = {
-  let path = (ansi "#1f6feb") + $env.PWD + (ansi reset)
+  let path = (ansi "#3A96DD") + $env.PWD + (ansi reset)
   $path
 }
 
@@ -34,10 +34,10 @@ table: {
   }
   color_config: {
     separator: white
-    header: "#1f6feb"  # Headers (name, type, size, modified)
-    row_index: "#1f6feb"  # Row numbers
-    shape_external: light_cyan
-    shape_externalarg: cyan
+    header: "#3A96DD"  # Headers (name, type, size, modified)
+    row_index: "#3A96DD"  # Row numbers
+    shape_external: cyan
+    shape_externalarg: "#3A96DD"
     shape_closure: green_bold
   }
     keybindings: [
