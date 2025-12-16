@@ -1,7 +1,7 @@
 # config.nu
 #
 # Installed by:
-# version = "0.106.1"
+# version = "0.109.1"
 #
 # This file is used to override default Nushell settings, define
 # (or import) custom commands, or run any other startup tasks.
@@ -36,7 +36,8 @@ table: {
     separator: white
     header: "#3A96DD"  # Headers (name, type, size, modified)
     row_index: "#3A96DD"  # Row numbers
-    shape_external: cyan
+    shape_external: light_cyan
+    filesize: light_cyan
     shape_externalarg: "#3A96DD"
     shape_closure: green_bold
   }
